@@ -5,17 +5,18 @@ public class Main {
     public static void main(String[] args) {
         int x1 = (int) 1e6;
         byte x2 = 12;
-        int x3 = 1000;
+        short x3 = 1000;
         long x4 = (long) 1e12;
         float y1 = 1e5F;
         double y2 = 1e14;
 
-        System.out.println(x1);
-        System.out.println(x2);
-        System.out.println(x3);
-        System.out.println(x4);
-        System.out.println(y1);
-        System.out.println(y2);
+
+        System.out.format("Значение переменной x1 с типом int равно %s\n", x1);
+        System.out.format("Значение переменной x2 с типом byte равно %s\n", x2);
+        System.out.format("Значение переменной x3 с типом short равно %s\n", x3);
+        System.out.format("Значение переменной x4 с типом long равно %s\n", x4);
+        System.out.format("Значение переменной y1 с типом float равно %s\n", y1);
+        System.out.format("Значение переменной y2 с типом double равно %s\n", y2);
         System.out.println("--------------");
 
 
