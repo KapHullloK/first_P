@@ -13,14 +13,14 @@ public class Main {
         System.out.println("---------------");
 
 
-        boolean clientOS_2 = 0 == 0;
+        boolean userOS = 0 == 0;
         int clientDeviceYear = 2015;
 
-        if (clientDeviceYear < 2015 && clientOS_2) {
+        if (clientDeviceYear < 2015 && userOS) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clientDeviceYear < 2015 && !clientOS_2) {
+        } else if (clientDeviceYear < 2015 && !userOS) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (clientDeviceYear >= 2015 && clientOS_2) {
+        } else if (clientDeviceYear >= 2015 && userOS) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else {
             System.out.println("Установите версию приложения для Android по ссылке");
@@ -94,6 +94,8 @@ public class Main {
             case 12:
                 System.out.println("Декабрь");
                 break;
+            default:
+                System.out.println("Такого месяца не существует");
         }
 
     }
