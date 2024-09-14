@@ -3,7 +3,7 @@ import java.lang.Math;
 
 public class Main {
     public static void main(String[] args) {
-        boolean clientOS = 1 == 0;
+        boolean clientOS = false;
 
         if (clientOS) {
             System.out.println("Установите версию приложения для iOS по ссылке");
@@ -43,9 +43,9 @@ public class Main {
 
         if (deliveryDistance <= 20) {
             ans += "1";
-        } else if (20 < deliveryDistance && deliveryDistance <= 60) {
+        } else if (20 < deliveryDistance && deliveryDistance < 60) {
             ans += "2";
-        } else if (60 < deliveryDistance && deliveryDistance <= 100) {
+        } else if (60 <= deliveryDistance && deliveryDistance <= 100) {
             ans += "3";
         } else {
             ans = "Доставки нет";
@@ -55,48 +55,27 @@ public class Main {
         System.out.println("---------------");
 
 
-        int monthNumber = 12;
+        int monthNumber = 8;
+        monthNumber = (monthNumber + 2) / 3;
+        String season = "";
 
         switch (monthNumber) {
             case 1:
-                System.out.println("Январь");
+                season += "Зима";
                 break;
             case 2:
-                System.out.println("Февраль");
+                season += "Весна";
                 break;
             case 3:
-                System.out.println("Март");
+                season += "Лето";
                 break;
             case 4:
-                System.out.println("Апрель");
-                break;
-            case 5:
-                System.out.println("Май");
-                break;
-            case 6:
-                System.out.println("Июнь");
-                break;
-            case 7:
-                System.out.println("Июль");
-                break;
-            case 8:
-                System.out.println("Август");
-                break;
-            case 9:
-                System.out.println("Сентябрь");
-                break;
-            case 10:
-                System.out.println("Октябрь");
-                break;
-            case 11:
-                System.out.println("Ноябрь");
-                break;
-            case 12:
-                System.out.println("Декабрь");
+                season += "Осень";
                 break;
             default:
-                System.out.println("Такого месяца не существует");
+                season += "Такого сезона не существует";
         }
+        System.out.println(season);
 
     }
 }
