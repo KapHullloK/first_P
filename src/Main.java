@@ -67,6 +67,13 @@ public class Main {
             bank_account += bank_account / 100;
             System.out.format("Месяц %s, сумма накоплений равна %s рублей\n", i, bank_account);
         }
+        System.out.println("-----------");
+
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.print(2 * i);
+            System.out.print(" ");
+        }
 
     }
 }
