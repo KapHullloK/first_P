@@ -56,7 +56,6 @@ public class Main {
 
 
         int monthNumber = 8;
-        monthNumber = (monthNumber + 2) / 3;
         String season = "";
 
         switch (monthNumber) {
@@ -64,12 +63,36 @@ public class Main {
                 season += "Зима";
                 break;
             case 2:
-                season += "Весна";
+                season += "Зима";
                 break;
             case 3:
-                season += "Лето";
+                season += "Зима";
                 break;
             case 4:
+                season += "Весна";
+                break;
+            case 5:
+                season += "Весна";
+                break;
+            case 6:
+                season += "Весна";
+                break;
+            case 7:
+                season += "Лето";
+                break;
+            case 8:
+                season += "Лето";
+                break;
+            case 9:
+                season += "Лето";
+                break;
+            case 10:
+                season += "Осень";
+                break;
+            case 11:
+                season += "Осень";
+                break;
+            case 12:
                 season += "Осень";
                 break;
             default:
