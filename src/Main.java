@@ -2,77 +2,78 @@ import java.lang.Math;
 
 
 public class Main {
+
     public static void main(String[] args) {
 
-        for (int i = 0; i <= 10; i++) {
-            System.out.print(i);
-            System.out.print(" ");
-        }
-        System.out.println("\n-----------");
-
-        for (int i = 10; i > 0; i--) {
-            System.out.print(i);
-            System.out.print(" ");
-        }
-        System.out.println("\n-----------");
-
-
-        for (int i = 0; i <= 17; i++) {
-            if (i % 2 == 0) {
-                System.out.print(i);
-                System.out.print(" ");
-            }
-        }
-        System.out.println("\n-----------");
-
-        for (int i = 10; i >= -10; i--) {
-            System.out.print(i);
-            System.out.print(" ");
-        }
-        System.out.println("\n-----------");
-
-        for (int i = 1904; i <= 2096; i++) {
-            if (i % 4 == 0 && (i % 100 != 0 || i % 400 == 0)) {
-                System.out.print(i);
-                System.out.print(" ");
-            }
-        }
-        System.out.println("\n-----------");
-
-        for (int i = 7; i <= 98; i += 7) {
-            System.out.print(i);
-            System.out.print(" ");
-        }
-        System.out.println("\n-----------");
-
-        for (int i = 1; i <= 512; i *= 2) {
-            System.out.print(i);
-            System.out.print(" ");
-        }
-        System.out.println("\n-----------");
-
+        int month = 0;
         int total = 0;
-        int amount = 29000;
 
-        for (int i = 1; i <= 12; i++) {
-            total += amount;
-            System.out.format("Месяц %s, сумма накоплений равна %s рублей\n", i, total);
+        while (total < 2_459_000) {
+            total += 15_000;
+            month++;
         }
+        System.out.format("Месяц %s, сумма накоплений равна %s рублей\n", month, total);
         System.out.println("-----------");
 
-        int bank_account = 0;
+        int cur = 0;
 
-        for (int i = 1; i <= 12; i++) {
-            bank_account += amount;
-            bank_account += bank_account / 100;
-            System.out.format("Месяц %s, сумма накоплений равна %s рублей\n", i, bank_account);
-        }
-        System.out.println("-----------");
-
-
-        for (int i = 1; i <= 10; i++) {
-            System.out.print(2 * i);
+        while (cur < 10) {
+            cur++;
+            System.out.print(cur);
             System.out.print(" ");
+        }
+        System.out.println();
+        for (; cur > 0; cur--) {
+            System.out.print(cur);
+            System.out.print(" ");
+        }
+        System.out.println("\n-----------");
+
+        int people = (int) 12e6;
+        int year = 1;
+        for (; year <= 10; year++) {
+            people += people / 1000 * 9;
+            System.out.format("Год %s, численность населения составляет %s\n", year, people);
+        }
+        System.out.println("-----------");
+
+        int bank_account = 15_000;
+        month = 0;
+
+        while (bank_account < (int) 12e6) {
+            bank_account += bank_account / 100 * 7;
+            month++;
+        }
+
+        System.out.format("Месяц %s, сумма накоплений равна %s рублей\n", month, bank_account);
+
+        System.out.println("-----------");
+
+        int bank_account2 = 15_000;
+        month = 0;
+
+        while (month < 9 * 12) {
+            bank_account2 += bank_account2 / 100 * 7;
+            month++;
+            if (month % 6 == 0) {
+                System.out.format("Полгода %s, сумма накоплений равна %s рублей\n", month / 6, bank_account2);
+            }
+        }
+        System.out.println("-----------");
+
+        int friday = 5;
+
+        for (; friday < 31; friday += 7) {
+            System.out.format("Сегодня пятница, %s-е число. Необходимо подготовить отчет\n", friday);
+        }
+        System.out.println("-----------");
+
+        int cur_year = 2024;
+
+        for (int left_bound = cur_year - 200; left_bound < cur_year + 100; left_bound++) {
+            if (left_bound % 79 == 0) {
+                System.out.println(left_bound);
+            }
         }
 
     }
