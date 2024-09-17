@@ -28,25 +28,13 @@ public class Main {
         System.out.println("---------------");
 
 
-        int year = 2016;
-
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0 && year >= 1584) {
-            System.out.format("%s год является високосным\n", year);
         } else {
             System.out.format("%s год не является високосным\n", year);
         }
         System.out.println("---------------");
 
 
-        int deliveryDistance = 925;
-        String ans = "Потребуется дней: ";
 
-        if (deliveryDistance <= 20) {
-            ans += "1";
-        } else if (20 < deliveryDistance && deliveryDistance < 60) {
-            ans += "2";
-        } else if (60 <= deliveryDistance && deliveryDistance <= 100) {
-            ans += "3";
         } else {
             ans = "Доставки нет";
         }
