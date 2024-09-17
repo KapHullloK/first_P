@@ -39,15 +39,6 @@ public class Main {
         }
         System.out.println("\n-----------");
 
-        for (int i = 7; i <= 98; i += 7) {
-            System.out.print(i);
-            System.out.print(" ");
-        }
-        System.out.println("\n-----------");
-
-        for (int i = 1; i <= 512; i *= 2) {
-            System.out.print(i);
-            System.out.print(" ");
         }
         System.out.println("\n-----------");
 
@@ -59,13 +50,7 @@ public class Main {
             System.out.format("Месяц %s, сумма накоплений равна %s рублей\n", i, total);
         }
         System.out.println("-----------");
-
-        int bank_account = 0;
-
-        for (int i = 1; i <= 12; i++) {
-            bank_account += amount;
-            bank_account += bank_account / 100;
-            System.out.format("Месяц %s, сумма накоплений равна %s рублей\n", i, bank_account);
+  
         }
         System.out.println("-----------");
 
