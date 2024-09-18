@@ -1,81 +1,74 @@
 import java.lang.Math;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 
 public class Main {
 
     public static void main(String[] args) {
 
-        int month = 0;
-        int total = 0;
+        int[] lst1 = new int[3];
 
-        while (total < 2_459_000) {
-            total += 15_000;
-            month++;
-            if (month % 12 == 0) {
-                total += total / 100 * 12;
+        for (int i = 0; i < lst1.length; i++) {
+            lst1[i] = i + 1;
+            System.out.print(lst1[i]);
+            if (i + 1 != lst1.length) {
+                System.out.print(", ");
             }
         }
-        System.out.format("Месяц %s, сумма накоплений равна %s рублей\n", month, total);
-        System.out.println("-----------");
 
-        int cur = 0;
-
-        while (cur < 10) {
-            cur++;
-            System.out.print(cur);
-            System.out.print(" ");
+        System.out.println();
+        float[] lst2 = {1.57F, 7.654F, 9.986F};
+        for (int i = 0; i < lst2.length; i++) {
+            System.out.print(lst2[i]);
+            if (i + 1 != lst2.length) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
-        for (; cur > 0; cur--) {
-            System.out.print(cur);
-            System.out.print(" ");
-        }
-        System.out.println("\n-----------");
-
-        int people = (int) 12e6;
-        int year = 1;
-        for (; year <= 10; year++) {
-            people += people / 1000 * 9;
-            System.out.format("Год %s, численность населения составляет %s\n", year, people);
-        }
-        System.out.println("-----------");
-
-        int bank_account = 15_000;
-        month = 0;
-
-        while (bank_account < (int) 12e6) {
-            bank_account += bank_account / 100 * 7;
-            month++;
-        }
-
-        System.out.format("Месяц %s, сумма накоплений равна %s рублей\n", month, bank_account);
-
-        System.out.println("-----------");
-
-        int bank_account2 = 15_000;
-        month = 0;
-
-        while (month < 9 * 12) {
-            bank_account2 += bank_account2 / 100 * 7;
-            month++;
-            if (month % 6 == 0) {
-                System.out.format("Полгода %s, сумма накоплений равна %s рублей\n", month / 6, bank_account2);
+        int[] lst3 = {1, 3, 6, 9};
+        for (int i = 0; i < lst3.length; i++) {
+            System.out.print(lst3[i]);
+            if (i + 1 != lst3.length) {
+                System.out.print(", ");
             }
         }
-        System.out.println("-----------");
 
-        int friday = 5;
-
-        for (; friday < 31; friday += 7) {
-            System.out.format("Сегодня пятница, %s-е число. Необходимо подготовить отчет\n", friday);
+        System.out.println();
+        for (int i = lst1.length - 1; i >= 0; i--) {
+            System.out.print(lst1[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
         }
-        System.out.println("-----------");
 
-        int cur_year = 2024;
+        System.out.println();
+        for (int i = lst2.length - 1; i >= 0; i--) {
+            System.out.print(lst2[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
 
-        for (int left_bound = cur_year - 200; left_bound < cur_year + 100; left_bound++) {
-            if (left_bound % 79 == 0) {
-                System.out.println(left_bound);
+        System.out.println();
+        for (int i = lst3.length - 1; i >= 0; i--) {
+            System.out.print(lst3[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
+
+        for (int i = 0; i < lst1.length; i++) {
+            if (lst1[i] % 2 != 0) {
+                lst1[i] += 1;
+            }
+        }
+
+        System.out.println();
+        for (int i = 0; i < lst1.length; i++) {
+            System.out.print(lst1[i]);
+            if (i != lst1.length - 1) {
+                System.out.print(", ");
             }
         }
 
