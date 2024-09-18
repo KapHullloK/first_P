@@ -11,6 +11,9 @@ public class Main {
         while (total < 2_459_000) {
             total += 15_000;
             month++;
+            if (month % 12 == 0) {
+                total += total / 100 * 12;
+            }
         }
         System.out.format("Месяц %s, сумма накоплений равна %s рублей\n", month, total);
         System.out.println("-----------");
