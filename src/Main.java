@@ -8,7 +8,7 @@ public class Main {
         boolean os = false;
 
         check_year(year);
-        check_mobile_os(os, mob_year);
+        check_mobile_device(os, mob_year);
         get_days(34);
     }
 
@@ -20,10 +20,10 @@ public class Main {
         }
     }
 
-    public static void check_mobile_os(boolean mob_os, int date) {
+    public static void check_mobile_device(boolean telephone_os, int date) {
         int currentYear = LocalDate.now().getYear();
 
-        if (mob_os) {
+        if (telephone_os) {
             if (currentYear > date)
                 System.out.println("Вам нужно скачать облегченную версию приложения под Android");
             else {
@@ -33,7 +33,7 @@ public class Main {
             if (currentYear > date)
                 System.out.println("Вам нужно скачать облегченную версию приложения под iOS");
             else {
-                System.out.println("Вам нужно скачать облегченную версию приложения под iOS");
+                System.out.println("Вам нужно скачать обычную версию приложения под iOS");
             }
         }
     }
