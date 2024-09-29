@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Main {
 
@@ -7,12 +8,12 @@ public class Main {
         int mob_year = 2022;
         boolean os = false;
 
-        check_year(year);
-        check_mobile_device(os, mob_year);
-        get_days(34);
+        checkYear(year);
+        checkMobileDevice(os, mob_year);
+        getDays(34);
     }
 
-    public static void check_year(int year) {
+    public static void checkYear(int year) {
         if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
             System.out.format("%s год — високосный год\n", year);
         } else {
@@ -20,17 +21,17 @@ public class Main {
         }
     }
 
-    public static void check_mobile_device(boolean telephone_os, int date) {
+    public static void checkMobileDevice(boolean telephone_os, int dateCreateDevice) {
         int currentYear = LocalDate.now().getYear();
 
         if (telephone_os) {
-            if (currentYear > date)
+            if (currentYear > dateCreateDevice)
                 System.out.println("Вам нужно скачать облегченную версию приложения под Android");
             else {
                 System.out.println("Вам нужно скачать обычную версию приложения под Android");
             }
         } else {
-            if (currentYear > date)
+            if (currentYear > dateCreateDevice)
                 System.out.println("Вам нужно скачать облегченную версию приложения под iOS");
             else {
                 System.out.println("Вам нужно скачать обычную версию приложения под iOS");
@@ -38,7 +39,7 @@ public class Main {
         }
     }
 
-    public static void get_days(int distance) {
+    public static void getDays(int distance) {
 
         String ans = "";
 
