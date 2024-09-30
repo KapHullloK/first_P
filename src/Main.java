@@ -21,17 +21,17 @@ public class Main {
         }
     }
 
-    public static void checkMobileDevice(boolean telephone_os, int dateCreateDevice) {
+    public static void checkMobileDevice(boolean telephone_os, int yearCreateDevice) {
         int currentYear = LocalDate.now().getYear();
 
         if (telephone_os) {
-            if (currentYear > dateCreateDevice)
+            if (currentYear > yearCreateDevice)
                 System.out.println("Вам нужно скачать облегченную версию приложения под Android");
             else {
                 System.out.println("Вам нужно скачать обычную версию приложения под Android");
             }
         } else {
-            if (currentYear > dateCreateDevice)
+            if (currentYear > yearCreateDevice)
                 System.out.println("Вам нужно скачать облегченную версию приложения под iOS");
             else {
                 System.out.println("Вам нужно скачать обычную версию приложения под iOS");
