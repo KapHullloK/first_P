@@ -3,26 +3,29 @@
 public class Main {
 
     public static void main(String[] args) {
-        Author author1 = new Author("Bill", "Kurisy");
-        Author author2 = new Author("Mage", "Lasny");
-        Author author3 = new Author("Bill", "Kurisy");
 
-        Book book1 = new Book("horror", author1, 2018);
-        Book book2 = new Book("comedy", author2, 2012);
-        Book book3 = new Book("horror", author1, 2016);
+        Griffindor test1 = new Griffindor("July", 16, 23, 55);
+        Griffindor test2 = new Griffindor("Nanu", 18, 43, 47);
+        Slytherin test3 = new Slytherin("Bob", 16, 22, 15);
+        Slytherin test4 = new Slytherin("Kracky", 14, 12, 18);
 
+        // Testing "comparing local two students"
+        System.out.println(test1);
+        test1.magicVersus(test2);
+        test1.braveVersus(test2);
 
-        book1.setYearPublished(2016);
+        System.out.println();
 
-        System.out.format("%s\n", book1);
-        System.out.println("-----------");
-        System.out.format("%s\n", book2);
-        System.out.println("-----------");
-        System.out.println(author1.equals(author2));
-        System.out.println(author1.equals(author3));
-        System.out.println("-----------");
-        System.out.println(book1.equals(book2));
-        System.out.println(book1.equals(book3));
+        // Testing "comparing local two students"
+        System.out.println(test3);
+        test3.magicVersus(test4);
+        test3.slyVersus(test4);
+
+        System.out.println();
+
+        // Testing "comparing any two students"
+        test1.magicVersus(test3);
 
     }
+
 }
