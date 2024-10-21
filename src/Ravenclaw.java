@@ -1,9 +1,11 @@
 public class Ravenclaw extends Hogwarts {
     private int clever;
+    private int bluMagic;
 
-    public Ravenclaw(String name, int age, int magic, int clever) {
+    public Ravenclaw(String name, int age, int magic, int clever, int bluMagic) {
         super(name, age, magic);
         this.clever = clever;
+        this.bluMagic = bluMagic;
     }
 
 
@@ -15,19 +17,27 @@ public class Ravenclaw extends Hogwarts {
         this.clever = clever;
     }
 
-    public void cleverVersus(Ravenclaw another) {
-        if (this.clever > another.getClever()) {
-            System.out.format("%s's clever is stronger than %s's\n", this.getName(), another.getName());
-        } else if (this.clever < another.getClever()) {
-            System.out.format("%s's clever is stronger than %s's\n", another.getName(), this.getName());
+    public int getBluMagic() {
+        return bluMagic;
+    }
+
+    public void setBluMagic(int bluMagic) {
+        this.bluMagic = bluMagic;
+    }
+
+    public void ravenclawVersus(Ravenclaw another) {
+        if (this.clever + this.bluMagic > another.getClever() + another.getBluMagic()) {
+            System.out.format("%s is stronger than %s\n", this.getName(), another.getName());
+        } else if (this.clever + this.bluMagic < another.getClever() + another.getBluMagic()) {
+            System.out.format("%s is stronger than %s\n", another.getName(), this.getName());
         } else {
-            System.out.println("Their clever power is equal ");
+            System.out.println("Their power is equal ");
         }
     }
 
     @Override
     public String toString() {
-        return String.format("<%s> from Ravenclaw\nage: %s\nMagic Power: %s\nclever Power: %s",
-                this.getName(), this.getAge(), this.getMagic(), this.getClever());
+        return String.format("<%s> from Ravenclaw\nage: %s\nMagic Power: %s\nclever Power: %s\nBlu Magic: %s",
+                this.getName(), this.getAge(), this.getMagic(), this.getClever(), this.getBluMagic());
     }
 }
