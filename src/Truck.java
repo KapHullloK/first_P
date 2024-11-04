@@ -1,4 +1,4 @@
-public class Truck extends Car implements Transport {
+public class Truck extends Car {
 
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");

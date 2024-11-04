@@ -1,7 +1,4 @@
-public class Bicycle implements Transport {
-
-    private String modelName;
-    private int wheelsCount;
+public class Bicycle extends Transport {
 
     @Override
     public void updateTyre() {

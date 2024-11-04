@@ -1,8 +1,4 @@
-public class Car implements Transport {
-
-    private String modelName;
-    private int wheelsCount;
-
+public class Car extends Transport {
 
     public void checkEngine() {
         System.out.println("Проверяем двигатель");

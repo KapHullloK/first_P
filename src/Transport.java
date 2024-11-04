@@ -1,11 +1,14 @@
-public interface Transport {
-    void updateTyre();
+public abstract class Transport {
+    protected String modelName;
+    protected int wheelsCount;
 
-    String getModelName();
+    public abstract void updateTyre();
 
-    void setModelName(String modelName);
+    public abstract String getModelName();
 
-    int getWheelsCount();
+    public abstract void setModelName(String modelName);
 
-    void setWheelsCount(int wheelsCount);
+    public abstract int getWheelsCount();
+
+    public abstract void setWheelsCount(int wheelsCount);
 }
