@@ -1,14 +1,27 @@
-public abstract class Transport {
-    protected String modelName;
-    protected int wheelsCount;
+public class Transport extends TransportABS {
 
-    public abstract void updateTyre();
+    @Override
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
 
-    public abstract String getModelName();
+    @Override
+    public String getModelName() {
+        return modelName;
+    }
 
-    public abstract void setModelName(String modelName);
+    @Override
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
 
-    public abstract int getWheelsCount();
+    @Override
+    public int getWheelsCount() {
+        return wheelsCount;
+    }
 
-    public abstract void setWheelsCount(int wheelsCount);
+    @Override
+    public void setWheelsCount(int wheelsCount) {
+        this.wheelsCount = wheelsCount;
+    }
 }
