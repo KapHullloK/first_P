@@ -23,11 +23,11 @@ public class Main {
 
 
         ServiceStation station = new ServiceStation();
-        station.checkCar(car);
-        station.checkCar(car2);
-        station.checkBicycle(bicycle);
-        station.checkBicycle(bicycle2);
-        station.checkTruck(truck);
-        station.checkTruck(truck2);
+        station.check(car);
+        station.check(car2);
+        station.check(bicycle);
+        station.check(bicycle2);
+        station.check(truck);
+        station.check(truck2);
     }
 }
