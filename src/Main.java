@@ -1,33 +1,43 @@
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car();
-        Car car2 = new Car();
-        car.setModelName("car1");
-        car2.setModelName("car2");
-        car.setWheelsCount(4);
-        car2.setWheelsCount(4);
+        logging("asd_13", "123", "123");
+    }
 
-        Truck truck = new Truck();
-        Truck truck2 = new Truck();
-        truck.setModelName("truck1");
-        truck2.setModelName("truck2");
-        truck.setWheelsCount(6);
-        truck2.setWheelsCount(8);
+    public static void logging(String login, String password, String confirmPassword) {
+        try {
+            checkLogin(login);
+            checkPassword(password, confirmPassword);
+        } catch (WrongLoginException e) {
+            System.out.println("Wrong login");
+        } catch (WrongPasswordException e) {
+            System.out.println("Wrong password");
+        } finally {
+            System.out.println("Verification completed");
+        }
+    }
 
-        Bicycle bicycle = new Bicycle();
-        Bicycle bicycle2 = new Bicycle();
-        bicycle.setModelName("bicycle1");
-        bicycle2.setModelName("bicycle2");
-        bicycle.setWheelsCount(2);
-        bicycle2.setWheelsCount(2);
+    public static void checkLogin(String login) throws WrongLoginException {
+        if (!isAlpha(login) || login.length() > 20) {
+            throw new WrongLoginException();
+        }
+    }
 
+    public static void checkPassword(String password, String confirmPassword) throws WrongPasswordException {
+        if (!isAlpha(password) || password.length() > 20 || !password.equals(confirmPassword)) {
+            throw new WrongPasswordException();
+        }
+    }
 
-        ServiceStation station = new ServiceStation();
-        station.check(car);
-        station.check(car2);
-        station.check(bicycle);
-        station.check(bicycle2);
-        station.check(truck);
-        station.check(truck2);
+    public static boolean isAlpha(String name) {
+        char[] chars = name.toCharArray();
+
+        for (char c : chars) {
+            if (Character.isLetter(c) || Character.isDigit(c) || c == '_') {
+                continue;
+            } else {
+                return false;
+            }
+        }
+        return true;
     }
 }
