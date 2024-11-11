@@ -1,4 +1,4 @@
-public abstract class Transport {
+public abstract class Transport implements Serviceable {
     protected String modelName;
     protected int wheelsCount;
 
@@ -24,11 +24,5 @@ public abstract class Transport {
 
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
-    }
-
-    public void checkEngine() {
-    }
-
-    public void checkTrailer() {
     }
 }
